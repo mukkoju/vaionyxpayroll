@@ -2,6 +2,7 @@ package com.vaionyx.payroll;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -38,7 +39,7 @@ public class AuthController {
         }
 
         AppUser user = users.getFirst();
-        jdbcTemplate.update("update public.users set last_login_at = ? where id = ?", Instant.now(), user.id());
+        jdbcTemplate.update("update public.users set last_login_at = ? where id = ?", Timestamp.from(Instant.now()), user.id());
         return ResponseEntity.ok(new LoginResponse(user.id().toString(), user.email(), user.role()));
     }
 
