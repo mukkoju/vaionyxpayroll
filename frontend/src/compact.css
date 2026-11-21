@@ -42,6 +42,26 @@ main header { height: 60px; margin: 0 -42px 30px; padding: 0 32px; font-size: 14
 .login input, .form input, .form select, .tools input { padding: 10px; }
 .user-menu { width: 34px; height: 34px; font-size: 13px; }
 
+.company-switcher { position: relative; }
+.switcher-button { display: flex; align-items: center; gap: 10px; border: 0; background: transparent; color: #29324c; text-align: left; }
+.switcher-button span { display: grid; gap: 2px; }
+.switcher-button small { color: #7a839a; font-size: 10px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.switcher-button b { font-size: 14px; }
+.switcher-button i { color: #5c6680; font-style: normal; font-size: 16px; }
+.switcher-menu { position: absolute; z-index: 5; top: calc(100% + 10px); right: 0; width: 250px; overflow: hidden; padding: 7px; border: 1px solid #e3e7f0; border-radius: 10px; background: #fff; box-shadow: 0 12px 28px #25345b1c; }
+.switcher-menu p { margin: 5px 8px 7px; color: #7a839a; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.switcher-menu button { display: flex; width: 100%; justify-content: space-between; align-items: center; padding: 9px 8px; border: 0; border-radius: 6px; background: transparent; color: #3c4660; font-size: 13px; text-align: left; }
+.switcher-menu button:hover, .switcher-menu button.current { background: #edf4ff; color: #3174e5; }
+.company-list { display: grid; gap: 8px; margin: 18px 0 22px; }
+.company-row { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 12px; border: 1px solid #e3e7f0; border-radius: 8px; background: #fff; color: #3c4660; text-align: left; }
+.company-row:hover, .company-row.selected { border-color: #9fc1f8; background: #f6f9ff; }
+.company-row span { display: grid; gap: 3px; }
+.company-row small { color: #7d879c; font-size: 12px; }
+.company-row > b { color: #397be9; font-size: 12px; }
+.company-form { padding-top: 18px; border-top: 1px solid #edf0f4; }
+.company-form h3 { margin: 0 0 10px; font-size: 14px; }
+.save-notice { margin: 16px 0 0; color: #28784f; font-size: 13px; }
+
 @media (max-width: 800px) {
   main { padding: 0 20px 30px; }
   main header { margin: 0 -20px 30px; padding: 0 20px; }
