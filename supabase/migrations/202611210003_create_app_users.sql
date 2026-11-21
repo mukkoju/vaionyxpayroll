@@ -28,9 +28,5 @@ create trigger users_set_updated_at
 alter table public.users enable row level security;
 revoke all on public.users from anon, authenticated;
 
-insert into public.users (email, password_hash, role)
-values (
-  'sansaibajajhr@gmail.com',
-  crypt('hrRules', gen_salt('bf', 12)),
-  'SUPER_ADMIN'
-);
+-- Initial users are provisioned through the protected application admin flow.
+-- Never commit user passwords or password hashes to source control.
